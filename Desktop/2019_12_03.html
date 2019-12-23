@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <script src="jquery-3.4.1.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+    //jQuery 코딩
+$(document).ready(function(){
+//------------------------------------------------
+$("#btnHide").click(function(){ //눌럿을때
+  $("p").slideUp(1000); //p 숨긴다. hide(바로), fadeout(서서히), slide up,down,toggle(슬라이드식)
+    });
+//------------------------------------------------
+$("#btnShow").click(function(){ //눌럿을때
+  $("p").slideDown(1000); //p 보여준다.
+    });
+//------------------------------------------------
+$("#btnToggle").click(function(){
+  $("p").slideToggle(1000); //toggle : (on/off)스위치 방식이 아닌 한버튼으로 두가지를 반대로 실행하는 방법
+});
+//------------------------------------------------
+$("p").click(function(){ //p(텍스트)를 선택햇을때
+  $(this).slideUp(); //슬라이드업
+});
+//------------------------------------------------
+});
+</script>
+
+  </head>
+  <body>
+    <h1>jQuery Coding Test</h1>
+    <hr>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <button id="btnToggle">Toggle</button>
+    <hr>
+    <p>동의과학대학교</p>
+    <p>컴퓨터정보과</p>
+    <p>김준성</p>
+  </body>
+</html>
